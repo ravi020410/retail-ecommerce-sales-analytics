@@ -1,0 +1,3 @@
+-- Example load commands. Update absolute paths before running in PostgreSQL.
+-- \copy analytics.orders FROM 'data/cleaned/orders.csv' WITH CSV HEADER;
+-- Repeat for each dimension and fact CSV in data/cleaned.

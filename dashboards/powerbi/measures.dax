@@ -1,0 +1,12 @@
+Revenue = -- See docs/metric_definitions.md for calculation logic
+GrossProfit = -- See docs/metric_definitions.md for calculation logic
+ProfitMargin = -- See docs/metric_definitions.md for calculation logic
+AverageOrderValue = -- See docs/metric_definitions.md for calculation logic
+CustomerAcquisitionCost = -- See docs/metric_definitions.md for calculation logic
+CustomerRetentionRate = -- See docs/metric_definitions.md for calculation logic
+RepeatPurchaseRate = -- See docs/metric_definitions.md for calculation logic
+CustomerLifetimeValue = -- See docs/metric_definitions.md for calculation logic
+MonthlyRevenueGrowth = -- See docs/metric_definitions.md for calculation logic
+RegionalGrowthRate = -- See docs/metric_definitions.md for calculation logic
+TopProducts = -- See docs/metric_definitions.md for calculation logic
+BottomProducts = -- See docs/metric_definitions.md for calculation logic
