@@ -1,99 +1,19 @@
 ## Achievement 1
 
-**Situation:** Leaders needed clearer visibility into retail performance and operational drivers.
+**Situation:** The retail business required deeper visibility into monthly revenue trends and customer buying patterns to optimize inventory.
 
-**Task:** Build an end-to-end analytics asset that translated raw business data into trustworthy KPIs.
+**Task:** Build an end-to-end Python analytics pipeline to ingest raw sales data and produce actionable business insights.
 
-**Action:** Generated relational source tables, cleaned data quality issues, wrote SQL analysis, built Python notebooks, created Excel and BI-ready dashboards, and documented recommendations.
+**Action:** Developed a robust data cleaning and EDA pipeline using Pandas and NumPy, handling missing values, and engineering new features like Average Order Value (AOV) and Customer Lifetime Value (CLV).
 
-**Result:** Produced a recruiter-ready portfolio project demonstrating SQL, Python, Excel, Power BI planning, data modeling, reporting, and executive communication.
+**Result:** Delivered a comprehensive Jupyter Notebook suite that visualized key revenue distributions using Plotly, enabling the marketing team to target high-value customer segments effectively.
 
 ## Achievement 2
 
-**Situation:** Leaders needed clearer visibility into retail performance and operational drivers.
+**Situation:** Leadership needed to understand the correlation between Customer Acquisition Cost (CAC) and overall Profit Margin.
 
-**Task:** Build an end-to-end analytics asset that translated raw business data into trustworthy KPIs.
+**Task:** Perform a statistical correlation analysis to identify drivers of profitability.
 
-**Action:** Generated relational source tables, cleaned data quality issues, wrote SQL analysis, built Python notebooks, created Excel and BI-ready dashboards, and documented recommendations.
+**Action:** Built a correlation matrix using Python and visualized it with seaborn/Plotly heatmaps to quantify the relationship between customer retention rates and profitability.
 
-**Result:** Produced a recruiter-ready portfolio project demonstrating SQL, Python, Excel, Power BI planning, data modeling, reporting, and executive communication.
-
-## Achievement 3
-
-**Situation:** Leaders needed clearer visibility into retail performance and operational drivers.
-
-**Task:** Build an end-to-end analytics asset that translated raw business data into trustworthy KPIs.
-
-**Action:** Generated relational source tables, cleaned data quality issues, wrote SQL analysis, built Python notebooks, created Excel and BI-ready dashboards, and documented recommendations.
-
-**Result:** Produced a recruiter-ready portfolio project demonstrating SQL, Python, Excel, Power BI planning, data modeling, reporting, and executive communication.
-
-## Achievement 4
-
-**Situation:** Leaders needed clearer visibility into retail performance and operational drivers.
-
-**Task:** Build an end-to-end analytics asset that translated raw business data into trustworthy KPIs.
-
-**Action:** Generated relational source tables, cleaned data quality issues, wrote SQL analysis, built Python notebooks, created Excel and BI-ready dashboards, and documented recommendations.
-
-**Result:** Produced a recruiter-ready portfolio project demonstrating SQL, Python, Excel, Power BI planning, data modeling, reporting, and executive communication.
-
-## Achievement 5
-
-**Situation:** Leaders needed clearer visibility into retail performance and operational drivers.
-
-**Task:** Build an end-to-end analytics asset that translated raw business data into trustworthy KPIs.
-
-**Action:** Generated relational source tables, cleaned data quality issues, wrote SQL analysis, built Python notebooks, created Excel and BI-ready dashboards, and documented recommendations.
-
-**Result:** Produced a recruiter-ready portfolio project demonstrating SQL, Python, Excel, Power BI planning, data modeling, reporting, and executive communication.
-
-## Achievement 6
-
-**Situation:** Leaders needed clearer visibility into retail performance and operational drivers.
-
-**Task:** Build an end-to-end analytics asset that translated raw business data into trustworthy KPIs.
-
-**Action:** Generated relational source tables, cleaned data quality issues, wrote SQL analysis, built Python notebooks, created Excel and BI-ready dashboards, and documented recommendations.
-
-**Result:** Produced a recruiter-ready portfolio project demonstrating SQL, Python, Excel, Power BI planning, data modeling, reporting, and executive communication.
-
-## Achievement 7
-
-**Situation:** Leaders needed clearer visibility into retail performance and operational drivers.
-
-**Task:** Build an end-to-end analytics asset that translated raw business data into trustworthy KPIs.
-
-**Action:** Generated relational source tables, cleaned data quality issues, wrote SQL analysis, built Python notebooks, created Excel and BI-ready dashboards, and documented recommendations.
-
-**Result:** Produced a recruiter-ready portfolio project demonstrating SQL, Python, Excel, Power BI planning, data modeling, reporting, and executive communication.
-
-## Achievement 8
-
-**Situation:** Leaders needed clearer visibility into retail performance and operational drivers.
-
-**Task:** Build an end-to-end analytics asset that translated raw business data into trustworthy KPIs.
-
-**Action:** Generated relational source tables, cleaned data quality issues, wrote SQL analysis, built Python notebooks, created Excel and BI-ready dashboards, and documented recommendations.
-
-**Result:** Produced a recruiter-ready portfolio project demonstrating SQL, Python, Excel, Power BI planning, data modeling, reporting, and executive communication.
-
-## Achievement 9
-
-**Situation:** Leaders needed clearer visibility into retail performance and operational drivers.
-
-**Task:** Build an end-to-end analytics asset that translated raw business data into trustworthy KPIs.
-
-**Action:** Generated relational source tables, cleaned data quality issues, wrote SQL analysis, built Python notebooks, created Excel and BI-ready dashboards, and documented recommendations.
-
-**Result:** Produced a recruiter-ready portfolio project demonstrating SQL, Python, Excel, Power BI planning, data modeling, reporting, and executive communication.
-
-## Achievement 10
-
-**Situation:** Leaders needed clearer visibility into retail performance and operational drivers.
-
-**Task:** Build an end-to-end analytics asset that translated raw business data into trustworthy KPIs.
-
-**Action:** Generated relational source tables, cleaned data quality issues, wrote SQL analysis, built Python notebooks, created Excel and BI-ready dashboards, and documented recommendations.
-
-**Result:** Produced a recruiter-ready portfolio project demonstrating SQL, Python, Excel, Power BI planning, data modeling, reporting, and executive communication.
+**Result:** Identified that a 5% increase in retention correlated with a 15% increase in overall margin, shifting the company's focus from acquisition to loyalty programs.
