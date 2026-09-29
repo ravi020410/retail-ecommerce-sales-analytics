@@ -1,0 +1,95 @@
+// dax_measures.txt
+// Power BI DAX measures for the Retail E-Commerce Analytics model.
+// Import data/processed/*_clean.csv as the source tables (or connect directly
+// to the PostgreSQL analytics schema — see powerbi_build_guide.md for the
+// star-schema relationship diagram both approaches use).
+
+// ============================ Revenue & Margin =============================
+
+Total Revenue =
+CALCULATE ( SUM ( orders_clean[revenue] ), orders_clean[is_valid_price] = TRUE )
+
+Total Gross Profit =
+CALCULATE ( SUM ( orders_clean[gross_profit] ), orders_clean[is_valid_price] = TRUE )
+
+Gross Margin % =
+DIVIDE ( [Total Gross Profit], [Total Revenue] )
+
+Order Lines =
+CALCULATE ( COUNTROWS ( orders_clean ), orders_clean[is_valid_price] = TRUE )
+
+Average Order Value =
+DIVIDE ( [Total Revenue], [Order Lines] )
+
+Revenue YoY % =
+VAR CurrentRevenue = [Total Revenue]
+VAR PriorYearRevenue =
+    CALCULATE ( [Total Revenue], SAMEPERIODLASTYEAR ( calendar_clean[date] ) )
+RETURN
+    DIVIDE ( CurrentRevenue - PriorYearRevenue, PriorYearRevenue )
+
+// ============================ Customers =====================================
+
+Unique Customers =
+DISTINCTCOUNT ( orders_clean[customer_id] )
+
+Revenue per Customer =
+DIVIDE ( [Total Revenue], [Unique Customers] )
+
+Guest Checkout Revenue % =
+VAR GuestRevenue =
+    CALCULATE ( [Total Revenue], orders_clean[is_guest_checkout] = TRUE )
+RETURN
+    DIVIDE ( GuestRevenue, [Total Revenue] )
+
+// ============================ Marketing / CAC ===============================
+
+Total Marketing Spend =
+SUM ( marketing_spend_clean[spend] )
+
+New Customers =
+CALCULATE ( DISTINCTCOUNT ( customers_clean[customer_id] ) )
+
+CAC =
+DIVIDE ( [Total Marketing Spend], [New Customers] )
+
+Revenue per Dollar Spent =
+DIVIDE ( [Total Revenue], [Total Marketing Spend] )
+
+// ============================ Returns =======================================
+
+Total Refunded =
+SUM ( returns_clean[refund_amount] )
+
+Return Rate % =
+VAR TotalReturns = DISTINCTCOUNT ( returns_clean[return_id] )
+RETURN
+    DIVIDE ( TotalReturns, [Order Lines] )
+
+Net Revenue (after returns) =
+[Total Revenue] - [Total Refunded]
+
+// ============================ RFM / Churn ====================================
+
+// These reference the pre-computed data/processed/rfm_segments.csv and
+// data/processed/churn_features.csv tables (built in notebooks 03) rather than
+// being recalculated in DAX — RFM quartile scoring and the time-based churn
+// split are easier to get right once in Python than to re-derive in DAX, and
+// keeping the logic in one place avoids the two environments drifting apart.
+
+Avg Lifetime Revenue (RFM) =
+AVERAGE ( rfm_segments[monetary] )
+
+Champions Customer Count =
+CALCULATE ( COUNTROWS ( rfm_segments ), rfm_segments[segment] = "Champions" )
+
+// ============================ Discount Analysis ==============================
+
+Average Discount % =
+AVERAGE ( orders_clean[discount_pct] )
+
+Full Price Order Share =
+VAR FullPriceLines =
+    CALCULATE ( [Order Lines], orders_clean[discount_pct] = 0 )
+RETURN
+    DIVIDE ( FullPriceLines, [Order Lines] )
