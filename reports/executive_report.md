@@ -1,5 +1,4 @@
-# Retail E-Commerce Sales & Customer Analytics — Executive Report
-**Analyst:** Ravikant Yadav  
+# Retail E-Commerce Sales & Customer Analytics Executive Report  
 **Timeframe Analyzed:** January 2023 – December 2025 (3-Year Longitudinal Study)  
 **Dataset Scope:** 59,125 validated order transactions across 12,000 customers, 148 SKUs, and 8 merchandise categories  
 
