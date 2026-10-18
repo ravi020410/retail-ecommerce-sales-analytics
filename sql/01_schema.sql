@@ -1,11 +1,3 @@
--- 01_schema.sql
--- PostgreSQL DDL for the retail e-commerce analytics schema.
--- Retail E-Commerce Sales Analytics — PostgreSQL Enterprise Schema
--- Database Engine: PostgreSQL 14+ (Star-Schema Architecture)
--- Central fact table: orders (59,125 transactions)
--- Dimension tables: customers, products, regions, returns, marketing_spend
--- Primary and foreign key constraints enforce referential integrity across entities.
-
 CREATE SCHEMA IF NOT EXISTS analytics;
 
 CREATE TABLE IF NOT EXISTS analytics.regions (
