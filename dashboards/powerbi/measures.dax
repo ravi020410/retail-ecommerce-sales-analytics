@@ -1,9 +1,3 @@
-// dax_measures.txt
-// Power BI DAX measures for the Retail E-Commerce Analytics model.
-// Import data/processed/*_clean.csv as the source tables (or connect directly
-// to the PostgreSQL analytics schema — see powerbi_build_guide.md for the
-// star-schema relationship diagram both approaches use).
-
 // ============================ Revenue & Margin =============================
 
 Total Revenue =
