@@ -10,14 +10,14 @@ This technical implementation guide documents the data modeling, star-schema arc
 ### Source Data Files (`data/processed/`)
 Load the following cleaned CSV datasets via **Get Data → Text/CSV** (or connect directly to PostgreSQL 14+ via `Get Data → PostgreSQL Database` pointing to server `localhost`, database `retaildb`, schema `analytics`):
 
-1. `orders_clean.csv` (Central Fact Table — 59,125 transaction lines)
-2. `customers_clean.csv` (Customer Dimension — 12,000 customer accounts)
-3. `products_clean.csv` (Product Catalog Dimension — 148 SKUs across 8 categories)
-4. `regions_clean.csv` (Territory Dimension — 7 sales regions including surrogate key -1)
-5. `returns_clean.csv` (Post-Purchase Returns Fact Table — 4,589 return events)
-6. `marketing_spend_clean.csv` (Marketing Investment Fact Table — 1,296 monthly channel records across 36 months)
-7. `calendar_clean.csv` (Date Spine Dimension — 1,096 dates spanning 2023–2025)
-8. `rfm_segments.csv` (Engineered Customer Dimension Extension — RFM scores and cohort assignments)
+1. `orders_clean.csv` (Central Fact Table  59,125 transaction lines)
+2. `customers_clean.csv` (Customer Dimension  12,000 customer accounts)
+3. `products_clean.csv` (Product Catalog Dimension  148 SKUs across 8 categories)
+4. `regions_clean.csv` (Territory Dimension  7 sales regions including surrogate key -1)
+5. `returns_clean.csv` (Post-Purchase Returns Fact Table  4,589 return events)
+6. `marketing_spend_clean.csv` (Marketing Investment Fact Table  1,296 monthly channel records across 36 months)
+7. `calendar_clean.csv` (Date Spine Dimension  1,096 dates spanning 2023–2025)
+8. `rfm_segments.csv` (Engineered Customer Dimension Extension  RFM scores and cohort assignments)
 
 ### Power Query Data Type Transformation & Validation
 Upon initial ingestion, verify and apply the following explicit data type mappings:
@@ -44,7 +44,7 @@ Upon initial ingestion, verify and apply the following explicit data type mappin
 
 ## 2. Dedicated Calendar Dimension Table (DAX)
 
-To ensure robust time-intelligence calculations without relying on auto-date/time tables, ensure `calendar_clean` is properly configured or create an explicit DAX Date table:
+To ensure robust time intelligence calculations without relying on auto-date/time tables, ensure `calendar_clean` is properly configured or create an explicit DAX Date table:
 
 ```dax
 Calendar = 
@@ -252,5 +252,5 @@ CALCULATE (
   * X-Axis: `customers_clean[segment]` (Consumer, Small Business, Enterprise)
   * Values: Revenue per Customer ($926 Consumer vs. $10,266 Enterprise)
   * Secondary Value: `[Average Discount %]` (14.0% Enterprise vs. 4.9% Consumer)
-* **High-Value At-Risk Retention Queue (Matrix Table):**
+* **High Value At-Risk Retention Queue (Matrix Table):**
   * Columns: Customer ID, Segment, Recency (Days), Frequency (Orders), Lifetime Revenue, Churn Probability.
