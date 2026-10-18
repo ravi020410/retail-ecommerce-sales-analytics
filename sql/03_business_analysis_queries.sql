@@ -1,11 +1,3 @@
--- 03_business_analysis_queries.sql
--- 18 business analysis queries against the analytics schema (sql/01_schema.sql).
--- Every query in this file was executed against a live PostgreSQL 16 instance
--- as part of building this project (see reports/query_results.json for output).
--- All revenue/profit KPIs filter is_valid_price = TRUE and, where the metric is
--- customer-level, exclude is_guest_checkout = TRUE — both documented in
--- sql/02_data_quality_checks.sql and notebooks/02_data_cleaning.ipynb.
-
 -- =========================================================================
 -- Q1. Monthly revenue, gross profit, and margin trend
 -- =========================================================================
@@ -103,7 +95,7 @@ GROUP BY r.region_name
 ORDER BY total_revenue DESC;
 
 -- =========================================================================
--- Q8. Discount sensitivity — revenue and margin by discount bucket
+-- Q8. Discount sensitivity revenue and margin by discount bucket
 -- =========================================================================
 SELECT CASE
          WHEN discount_pct = 0 THEN '0% (full price)'
@@ -121,7 +113,7 @@ GROUP BY 1
 ORDER BY MIN(discount_pct);
 
 -- =========================================================================
--- Q9. RFM inputs — Recency, Frequency, Monetary per customer (base for segmentation)
+-- Q9. RFM inputs Recency, Frequency, Monetary per customer (base for segmentation)
 -- =========================================================================
 WITH last_date AS (SELECT MAX(order_date) AS max_date FROM analytics.orders)
 SELECT o.customer_id,
@@ -133,7 +125,7 @@ WHERE o.is_valid_price = TRUE AND o.is_guest_checkout = FALSE
 GROUP BY o.customer_id;
 
 -- =========================================================================
--- Q10. RFM segment summary (Champions / Loyal / At Risk / Lost — quartile-based)
+-- Q10. RFM segment summary (Champions / Loyal / At Risk / Lost quartile-based)
 -- =========================================================================
 WITH last_date AS (SELECT MAX(order_date) AS max_date FROM analytics.orders),
 rfm AS (
@@ -178,7 +170,7 @@ GROUP BY c.acquisition_channel
 ORDER BY avg_ltv_to_date DESC;
 
 -- =========================================================================
--- Q12. Monthly cohort retention — % of each signup cohort still active by month offset
+-- Q12. Monthly cohort retention % of each signup cohort still active by month offset
 -- =========================================================================
 WITH cohorts AS (
     SELECT customer_id, DATE_TRUNC('month', signup_date)::date AS cohort_month
@@ -275,7 +267,7 @@ WHERE is_valid_price = TRUE
 GROUP BY is_guest_checkout;
 
 -- =========================================================================
--- Q18. Enterprise vs. Consumer profitability — margin and discount comparison
+-- Q18. Enterprise vs. Consumer profitability margin and discount comparison
 -- =========================================================================
 SELECT c.segment,
        ROUND(SUM(o.revenue), 2) AS total_revenue,
