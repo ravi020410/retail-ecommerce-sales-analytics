@@ -15,8 +15,8 @@ The report suite models **3 years (2023–2025)** of transactional retail data a
 ![Page 1: Executive Sales Overview](../visuals/powerbi/01_executive_overview.jpg)
 
 #### Core Operational Insights (Page 1):
-* **Top-Line Trajectory:** Revenue scaled from **$1.02M (2023)** to **$6.96M (2024, +582.7% YoY)** to **$15.89M (2025, +128.2% YoY)**.
-* **Margin Resilience:** Blended gross margin remained remarkably stable within the **25.0%–29.5% band** across all 36 months, averaging **28.4% overall ($6.78M cumulative gross profit)**.
+* **Top Line Trajectory:** Revenue scaled from **$1.02M (2023)** to **$6.96M (2024, +582.7% YoY)** to **$15.89M (2025, +128.2% YoY)**.
+* **Margin Resilience:** Blended gross margin remained remarkably stable within the **25.0% 29.5% band** across all 36 months, averaging **28.4% overall ($6.78M cumulative gross profit)**.
 * **Category Profit Concentration:**
   * **Electronics** drives 45.2% of top-line volume (**$10.79M revenue**), but operates on the thinnest major margin (**16.11%**).
   * **Home ($4.16M revenue, 32.85% margin)** and **Fashion ($2.67M revenue, 48.03% margin)** generate **$2.65M in gross profit** on just 28.6% of top-line volume.
@@ -25,7 +25,7 @@ The report suite models **3 years (2023–2025)** of transactional retail data a
 ---
 
 ### Page 2: Marketing Channel Performance & CAC
-*Customer Acquisition Cost ($2.53–$46.09) across 5 channels, marketing efficiency ratio (43x–717x spread), and budget allocation optimization.*
+*Customer Acquisition Cost ($2.53-$46.09) across 5 channels, marketing efficiency ratio (43x–717x spread), and budget allocation optimization.*
 
 ![Page 2: Marketing CAC Performance](../visuals/powerbi/02_marketing_cac.jpg)
 
