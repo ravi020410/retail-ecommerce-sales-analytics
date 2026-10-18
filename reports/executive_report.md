@@ -61,7 +61,7 @@ Auditing acquisition spend against attributed revenue across the 5 marketing cha
 * Direct, Organic, and Email deliver massive ROI (700x+ return multiples), but are structurally capped in pure cold-acquisition volume.
 * **My Recommendation:** Do not slash Paid Search entirely (which would collapse baseline acquisition volume), but reallocate **15% to 20% of paid ad budgets (~$50K–$65K)** into automated email lifecycle marketing, post-purchase replenishment workflows, and customer referral programs. This lowers blended CAC while maintaining top-line momentum.
 
-### Finding 3: Segment Economics — Why Enterprise Accounts Justify Deeper Discounts
+### Finding 3: Segment Economics Why Enterprise Accounts Justify Deeper Discounts
 Comparing customer segments reveals distinct purchasing behaviors:
 * **Enterprise Accounts (5.2% of customer base):**
   * Generate **$10,266 in revenue per customer** (11.1x higher than the Consumer baseline of $926).
@@ -87,11 +87,11 @@ In `notebooks/05_business_insights.ipynb`, I built a Random Forest classifier to
 * **Leakage-Free Validation:** Rather than using random k-fold cross-validation (which introduces temporal target leakage in customer transaction data), I split the dataset on a strict historical cutoff date (`feature_cutoff_date: 2025-01-05`, evaluating churn across a 180-day observation window through `2025-07-04`).
 * **Model Discrimination:** Attained an **ROC-AUC of 0.5822**.
 * **Top Predictive Features:**
-  1. `segment_enc` (14.9% importance — Enterprise/SMB vs Consumer)
-  2. `avg_discount` (14.3% importance — promotional dependency)
-  3. `avg_order_value` (13.6% importance — basket size)
-  4. `monetary` (12.2% importance — cumulative historical spend)
-  5. `total_quantity` (11.2% importance — unit volume)
+  1. `segment_enc` (14.9% importance Enterprise/SMB vs Consumer)
+  2. `avg_discount` (14.3% importance promotional dependency)
+  3. `avg_order_value` (13.6% importance  basket size)
+  4. `monetary` (12.2% importance cumulative historical spend)
+  5. `total_quantity` (11.2% importance unit volume)
 
 ### Why 0.5822 AUC is an Honest, Realistic Finding:
 In purely transactional order data (order dates, quantities, prices), predicting whether an e-commerce customer will return after 6 months is inherently noisy. Without clickstream data (website logins, cart abandonment, email open rates, app sessions), a transactional model cannot capture browsing intent. 
@@ -102,7 +102,7 @@ Reporting an AUC of 0.5822 demonstrates analytical integrity: I used a strict te
 
 ## 4. Strategic Recommendations for Leadership
 
-1. **Reallocate 15%–20% of Paid Search Budget to Lifecycle Marketing:** Shift ~$50K–$65K out of low-efficiency paid search ($46.09 CAC) into automated email win-back and replenishment workflows ($2.57 CAC).
+1. **Reallocate 15% - 20% of Paid Search Budget to Lifecycle Marketing:** Shift ~$50K–$65K out of low-efficiency paid search ($46.09 CAC) into automated email win-back and replenishment workflows ($2.57 CAC).
 2. **Prioritize the 2,331 At-Risk Repeat Customers:** Ring-fence win-back ad budgets exclusively for high-LTV repeat buyers ($2,642 avg historical spend) rather than wasting marketing capital on single-purchase dormant users.
 3. **Protect Enterprise Discount Structures:** Maintain tiered discount governance (allowing 12%–15% Enterprise discounts) to protect the $10,266 revenue per customer delivered by B2B accounts.
 4. **Expand High-Margin Beauty & Fashion Offerings:** Feature high-margin categories (Beauty at 57.3% margin, Fashion at 48.0% margin) in homepage placements and email promotions to balance low-margin Electronics volume.
