@@ -1,12 +1,12 @@
 # Retail E-Commerce Sales & Customer Analytics Executive Report  
-**Timeframe Analyzed:** January 2023 – December 2025 (3-Year Longitudinal Study)  
+**Timeframe Analyzed:** January 2023 - December 2025 (3-Year Longitudinal Study)  
 **Dataset Scope:** 59,125 validated order transactions across 12,000 customers, 148 SKUs, and 8 merchandise categories  
 
 ---
 
 ## Why I Built This Project
 
-In multi-channel retail e-commerce, executive teams often look only at top-line revenue growth without understanding what is actually happening underneath: customer acquisition costs (CAC) inflating, discounting eating into gross margins, and high-value repeat buyers quietly churning.
+In multi-channel retail e-commerce, executive teams often look only at top line revenue growth without understanding what is actually happening underneath: customer acquisition costs (CAC) inflating, discounting eating into gross margins, and high-value repeat buyers quietly churning.
 
 I built this analytical system to evaluate the unit economics of a high-growth retail business over a 3-year expansion window (scaling from $1.02M to $15.89M in annual sales). I wanted to answer four practical, commercial questions:
 
