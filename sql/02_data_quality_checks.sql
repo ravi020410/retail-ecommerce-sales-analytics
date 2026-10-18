@@ -1,9 +1,3 @@
--- 02_data_quality_checks.sql
--- Detection queries for the 6 known data-quality issues in this dataset.
--- Each query here is the query that *found* the issue during EDA — run them
--- against the raw load (before scripts/clean_and_load.py) to reproduce the
--- audit; run them against analytics.orders after cleaning to confirm the fix.
-
 -- 1. Duplicate order rows (same customer/product/date/price/qty repeated)
 SELECT customer_id, product_id, order_date, unit_price, quantity, COUNT(*) AS dup_count
 FROM analytics.orders
